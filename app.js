@@ -20,7 +20,7 @@ const drawGame = () => {
 
 }
 
-const showWinner = (userWin,compChoice) => {
+const showWinner = (userWin,userChoice,compChoice) => {
     if (userWin) {
         userScore++;
         userScorePara.innerText = userScore;
@@ -61,7 +61,7 @@ const playGame = (userChoice) => {
         else {
             userWin = compChoice === "rock" ? false : true;
         }
-        showWinner(userWin,compChoice);
+        showWinner(userWin,userChoice,compChoice);
     }
 
 }
